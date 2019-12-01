@@ -118,7 +118,7 @@ fi
 
 # added this
 powerline-daemon -q
-. ~/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+. ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
 # finish add
 
 

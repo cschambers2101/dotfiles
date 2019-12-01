@@ -12,6 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Insert plugins here
 Plugin 'mattn/emmet-vim'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -28,6 +30,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Powerline
+set laststatus=2
 
 " Set numbering
 set number

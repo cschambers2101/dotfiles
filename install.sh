@@ -26,6 +26,10 @@ echo 'Installing local dot files ... '
 cp bashrc ~/.bashrc
 cp vimrc ~/.vimrc
 cp tmux ~/.tmux.conf
+if [ ! -d "~/.config/powerline" ]; then
+    mkdir -p ~/.config/powerline
+fi
+cp powerline ~/.config/powerline/config.json
 echo 'complete'
 
 

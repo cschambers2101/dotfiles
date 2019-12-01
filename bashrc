@@ -117,15 +117,10 @@ if ! shopt -oq posix; then
 fi
 
 # added this
-#function _update_ps1() {
-#    PS1=$(powerline-shell $?)
-#}
-
-#if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
+powerline-daemon -q
+. ~/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 # finish add
 
-. ~/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+
 
 

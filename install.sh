@@ -13,6 +13,10 @@ echo 'Installing Powerline'
 sudo apt -qq -y install fonts-powerline powerline
 echo 'complete'
 
+echo 'Installing NeoFetch'
+sudo apt -qq -y install neofetch
+echo 'complete'
+
 echo
 echo 'Installing Vundle plugin manager for Vim ... '
 # Install Vundle to allow plugins to work

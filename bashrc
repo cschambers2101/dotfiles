@@ -119,6 +119,8 @@ fi
 # added this
 powerline-daemon -q
 . ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
+
+neofetch
 # finish add
 
 

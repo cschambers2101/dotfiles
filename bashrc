@@ -177,4 +177,23 @@ function extract {
 fi
 }
 
-
+function myhelp() {
+    echo 'Aliases in my ~/.bashrc'
+    echo
+    echo 'll -> ls -lhA'
+    echo 'cd.. -> cd ..'
+    echo 'here -> finds a named file in the current directory'
+    echo 'df -> df -Ths --total'
+    echo 'du -> du -ach | sort -h'
+    echo 'free -> free -mt'
+    echo 'psg -> ps aux | grep -v grep | grep -i -e VSZ -e'
+    echo 'mkdir -> mkdir -pv'
+    echo 'wget -> wget -c'
+    echo 'myip -> curl http://ipecho.net/plain; echo'
+    echo
+    echo 'Functions'
+    echo
+    echo 'mcd -> creates directory and cds into it'
+    echo 'extract -> should extract any archive file into the current directory'
+    echo 'myhelp -> prints this help file'
+}

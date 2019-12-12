@@ -6,7 +6,7 @@ sudo apt -qq update && sudo apt -qq upgrade -y && sudo apt -qq autoremove -y > /
 echo 'complete'
 echo
 echo 'installing some required software packages ... '
-sudo apt -qq install python3 python3-pip build-essential tmux vim-gtk3 gnome-tweaks -y > /dev/null
+sudo apt -qq install python3 python3-pip build-essential tmux vim-gtk3 gnome-tweaks cmake python3-dev -y > /dev/null
 echo 'complete'
 echo
 echo 'Installing Powerline'
@@ -35,5 +35,9 @@ if [ ! -d "~/.config/powerline" ]; then
 fi
 cp powerline ~/.config/powerline/config.json
 echo 'complete'
-
+echo
+echo 'After running PluginInstall in Vim, run the following commands'
+echo
+echo 'cd ~/.vim/bundle/YouCompleteMe'
+echo 'python3 install.py'
 

@@ -13,6 +13,15 @@ Plugin 'VundleVim/Vundle.vim'
 " Insert plugins here
 Plugin 'mattn/emmet-vim'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'jnurmine/Zenburn'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ycm-core/YouCompleteMe'
+
 set t_Co=256
 
 " All of your Plugins must be added before the following line
@@ -38,7 +47,9 @@ set number
 set relativenumber
 
 " turn on systax highlighting
+
 syntax on
+let python_highlight_all=1
 
 " set tabs
 set tabstop=4
@@ -50,3 +61,14 @@ noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
+colorscheme zenburn
+set clipboard=unnamed
+

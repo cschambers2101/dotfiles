@@ -2,25 +2,25 @@ clear
 
 # Install some required packages
 echo 'Doing any updates and removing unwanted software ... '
-sudo apt -qq update && sudo apt -qq upgrade -y && sudo apt -qq autoremove -y > /dev/null
+sudo apt update && sudo apt -qq upgrade -y && sudo apt -qq autoremove -y >
 echo 'complete'
 echo
 echo 'installing some required software packages ... '
-sudo apt -qq install python3 python3-pip build-essential tmux vim-gtk3 gnome-tweaks cmake python3-dev -y > /dev/null
+sudo apt install python3 python3-pip build-essential tmux vim-gtk3 cmake python3-dev -y
 echo 'complete'
 echo
 echo 'Installing Powerline'
-sudo apt -qq -y install fonts-powerline powerline > /dev/null
+sudo apt -y install fonts-powerline powerline
 echo 'complete'
 
 echo 'Installing NeoFetch'
-sudo apt -qq -y install neofetch > /dev/null
+sudo apt -y install neofetch
 echo 'complete'
 
 echo
 echo 'Installing Vundle plugin manager for Vim ... '
 # Install Vundle to allow plugins to work
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim > /dev/null
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo 'complete'
 
 echo 'You must run PluginInstall from within VIM to setup your plugins'

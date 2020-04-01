@@ -2,7 +2,7 @@ clear
 
 # Install some required packages
 echo 'Doing any updates and removing unwanted software ... '
-sudo apt update && sudo apt -qq upgrade -y && sudo apt -qq autoremove -y >
+sudo apt update && sudo apt upgrade -y && sudo apt  autoremove -y
 echo 'complete'
 echo
 echo 'installing some required software packages ... '

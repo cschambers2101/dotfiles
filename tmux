@@ -1,2 +1,2 @@
 # Setup Powerline in Tmux
-source "/home/craigchambers/.vim/bundle/powerline/powerline/bindings/tmux/powerline.conf"
+source "/home/${USER}/.vim/bundle/powerline/powerline/bindings/tmux/powerline.conf"

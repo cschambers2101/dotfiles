@@ -6,7 +6,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt  autoremove -y
 echo 'complete'
 echo
 echo 'installing some required software packages ... '
-sudo apt install python3 python3-pip build-essential tmux vim-gtk3 cmake python3-dev -y
+sudo apt install figlet python3 python3-pip build-essential tmux vim-gtk3 cmake python3-dev -y
 echo 'complete'
 echo
 echo 'Installing Powerline'
@@ -36,8 +36,24 @@ fi
 cp powerline ~/.config/powerline/config.json
 echo 'complete'
 echo
-echo 'After running PluginInstall in Vim, run the following commands'
+echo 'Vim text editor will now launch and install the plugins'
 echo
-echo 'cd ~/.vim/bundle/YouCompleteMe'
-echo 'python3 install.py'
+echo 'You will need to exit from Vim twice! Hit these keys to exit Vim'
+echo '[esc], :, q, [esc], :, q'
+echo
 
+read -p "Press any key to continue... " -n1 -s
+
+vim -c "PluginInstall"
+
+echo 'complete'
+# echo 'After running PluginInstall in Vim, run the following commands'
+# echo
+echo 'Setting up YouCompleteMe'
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py
+echo 'complete'
+
+clear
+
+figlet 'Your dotfiles are installed and setup'

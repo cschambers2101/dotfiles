@@ -6,7 +6,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt  autoremove -y
 echo 'complete'
 echo
 echo 'installing some required software packages ... '
-sudo apt install figlet python3 python3-pip build-essential tmux vim-gtk3 cmake python3-dev -y
+sudo apt install youtube-dl figlet python3 python3-pip build-essential tmux vim-gtk3 cmake python3-dev -y
 echo 'complete'
 echo
 echo 'Installing Powerline'

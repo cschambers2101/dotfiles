@@ -134,6 +134,7 @@ alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias mkdir="mkdir -pv"
 alias wget="wget -c"
 alias myip="curl http://ipecho.net/plain; echo"
+alias mp3="youtube-dl -x --audio-format mp3 -o '~/Music/%(title)s.%(ext)s' "
 
 # functions
 function mcd () {
@@ -190,6 +191,7 @@ function myhelp() {
     echo 'mkdir -> mkdir -pv'
     echo 'wget -> wget -c'
     echo 'myip -> curl http://ipecho.net/plain; echo'
+    echo 'mp3 -> downloads mp3 file from youtube'
     echo
     echo 'Functions'
     echo

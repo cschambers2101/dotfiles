@@ -135,7 +135,8 @@ alias mkdir="mkdir -pv"
 alias wget="wget -c"
 alias myip="curl http://ipecho.net/plain; echo"
 alias mp3="youtube-dl -x --audio-format mp3 -o '~/Music/%(title)s.%(ext)s' "
-alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+alias aac="youtube-dl -x --audio-format aac -o '~/Music/%(title)s.%(ext)s' "
+alias python="python3"
 
 # functions
 function mcd () {
@@ -193,7 +194,6 @@ function myhelp() {
     echo 'wget -> wget -c'
     echo 'myip -> curl http://ipecho.net/plain; echo'
     echo 'mp3 -> downloads mp3 file from youtube'
-    echo 'update -> full system update'
     echo
     echo 'Functions'
     echo

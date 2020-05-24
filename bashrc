@@ -137,6 +137,8 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias mp3="youtube-dl -x --audio-format mp3 -o '~/Music/%(title)s.%(ext)s' "
 alias aac="youtube-dl -x --audio-format aac -o '~/Music/%(title)s.%(ext)s' "
 alias python="python3"
+alias update="update_os"
+alias update_pop="update_pop_shell_shortcuts && update_pop_shell"
 
 # functions
 function mcd () {
@@ -200,4 +202,26 @@ function myhelp() {
     echo 'mcd -> creates directory and cds into it'
     echo 'extract -> should extract any archive file into the current directory'
     echo 'myhelp -> prints this help file'
+}
+
+function update_os() {
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo apt install --fix-broken -y
+}
+
+function update_pop_shell() {
+    cd ~/github/shell
+    git pull
+    make clean
+    ./rebuild.sh
+}
+
+function update_pop_shell_shortcuts() {
+    cd ~/github/shell-shortcuts
+    git pull
+    make clean
+    make
+    sudo make install
 }

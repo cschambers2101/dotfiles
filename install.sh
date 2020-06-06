@@ -6,7 +6,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt  autoremove -y
 echo 'complete'
 echo
 echo 'installing some required software packages ... '
-sudo apt install youtube-dl figlet python3 python3-pip build-essential tmux vim-gtk3 cmake python3-dev -y
+sudo apt install youtube-dl figlet python3 python3-pip build-essential tmux vim-gtk3 cmake python3-dev gnome-sushi -y
 echo 'complete'
 echo
 echo 'Installing Powerline'
@@ -40,6 +40,7 @@ echo 'Vim text editor will now launch and install the plugins'
 echo
 echo 'You will need to exit from Vim twice! Hit these keys to exit Vim'
 echo '[esc], :, q, [esc], :, q'
+echo 'Ignore the plugin error!'
 echo
 
 read -p "Press any key to continue... " -n1 -s

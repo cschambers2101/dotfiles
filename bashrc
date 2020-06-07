@@ -225,3 +225,6 @@ function update_pop_shell_shortcuts() {
     make
     sudo make install
 }
+
+set -o vi
+

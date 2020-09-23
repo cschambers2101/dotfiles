@@ -24,7 +24,6 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
-set t_Co=256
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,6 +39,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+set t_Co=256
 
 " Powerline
 set laststatus=2
@@ -73,4 +74,6 @@ nnoremap <space> za
 
 colorscheme zenburn
 set clipboard=unnamed
+
+set spell spelllang=en_gb
 

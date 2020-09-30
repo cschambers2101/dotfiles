@@ -139,6 +139,7 @@ alias aac="youtube-dl -x --audio-format aac -o '~/Music/%(title)s.%(ext)s' "
 alias python="python3"
 alias update="update_os"
 alias update_pop="update_pop_shell_shortcuts && update_pop_shell"
+alias c="clear"
 
 # functions
 function mcd () {
@@ -201,6 +202,7 @@ function myhelp() {
     echo
     echo 'mcd -> creates directory and cds into it'
     echo 'extract -> should extract any archive file into the current directory'
+    echo 'c -> clear'
     echo 'myhelp -> prints this help file'
 }
 

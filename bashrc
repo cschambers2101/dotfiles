@@ -141,7 +141,7 @@ alias update="update_os"
 alias update_pop="update_pop_shell_shortcuts && update_pop_shell"
 alias c="clear"
 alias attach="tmux attach-session -t "
-alias tnew="tmux new -s main"
+alias tnew="tmux new -s "
 
 # functions
 function mcd () {

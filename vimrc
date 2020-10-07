@@ -23,7 +23,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'mattn/emmet-vim'
 
 
 " All of your Plugins must be added before the following line

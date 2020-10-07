@@ -140,6 +140,8 @@ alias python="python3"
 alias update="update_os"
 alias update_pop="update_pop_shell_shortcuts && update_pop_shell"
 alias c="clear"
+alias attach="tmux attach-session -t "
+alias tnew="tmux new -s main"
 
 # functions
 function mcd () {
@@ -197,6 +199,8 @@ function myhelp() {
     echo 'wget -> wget -c'
     echo 'myip -> curl http://ipecho.net/plain; echo'
     echo 'mp3 -> downloads mp3 file from youtube'
+    echo 'tnew -> tmux new -s '
+    echo 'attach -> tmux attach-session -t '
     echo
     echo 'Functions'
     echo

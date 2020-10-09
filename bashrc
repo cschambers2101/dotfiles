@@ -143,6 +143,13 @@ alias c="clear"
 alias attach="tmux attach-session -t "
 alias tnew="tmux new -s "
 
+# browser-sync config
+# Get the current local IP address
+export SERVER_IP=`hostname -I`
+
+# The command alias to start the browser-sync server
+alias serve="browser-sync start --server --files . --no-notify --host $SERVER_IP --port 9000"
+
 # functions
 function mcd () {
     mkdir -p $1
@@ -208,6 +215,7 @@ function myhelp() {
     echo 'extract -> should extract any archive file into the current directory'
     echo 'c -> clear'
     echo 'myhelp -> prints this help file'
+    echo 'server -> browser-sync start --server --files . --no-notify --host $SERVER_IP --port 9000 #requires node to be installed'
 }
 
 function update_os() {

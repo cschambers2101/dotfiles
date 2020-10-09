@@ -77,7 +77,4 @@ set clipboard=unnamed
 
 set spell spelllang=en_gb
 
-" emmet plugin
-let g:user_emmet_mode='n' "only enable in normal mode
-let g:user_emmet_leader_key=','
 

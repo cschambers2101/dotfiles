@@ -48,6 +48,13 @@ fi
 cp powerline ~/.config/powerline/config.json
 echo 'complete'
 
+echo 'Setting up Vim (if you get any errors, just quit vim with esc :q'
+vim -c "PlugInstall"
+
+vim -c "CocInstall coc-browser coc-css coc-emmet coc-git coc-html coc-htmlhint coc-html-css-support coc-json coc-markdownlint coc-prettier coc-python coc-sh coc-spell-checker coc-tsserver"
+id=$(ps -A | grep vim | awk '{print $1}')
+
+echo 'complete'
 
 # echo
 # echo 'Vim text editor will now launch and install the plugins'
@@ -57,7 +64,7 @@ echo 'complete'
 # echo 'Ignore the plugin error!'
 # echo
 
-# read -p "Press any key to continue... " -n1 -s
+# read -p "Press any key to continue... " -n1 -
 
 # vim -c "PluginInstall"
 

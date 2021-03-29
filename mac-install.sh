@@ -3,6 +3,7 @@ clear
 echo 'This install script requires Homebrew for MacOS'
 echo "If you don't have it installed go here:"
 echo "https://brew.sh/"
+echo "Make sure you follow the instructions at the end of the breew install to add it to your path or this script won't work!"
 echo
 echo "This script will change your login shell to BASH"
 chsh -s /bin/bash

@@ -1,5 +1,13 @@
 clear
 
+echo 'This install script requires Homebrew for MacOS'
+echo "If you don't have it installed go here:"
+echo "https://brew.sh/"
+echo
+echo "This script will change your login shell to BASH"
+chsh -s /bin/bash
+brew install bash
+
 # Install some required packages
 echo 'Doing any updates and removing unwanted software ... '
 brew update

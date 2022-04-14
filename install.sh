@@ -1,7 +1,7 @@
 clear
 
 echo 'Installing NeoFetch'
-sudo apt -y install neofetch
+sudo apt -y install neofetch curl
 sudo snap install starship
 echo 'complete'
 

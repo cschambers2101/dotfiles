@@ -45,7 +45,7 @@ call plug#begin()
 
 " Make sure you use single quotes
 
-Plugin 'OmniSharp/omnisharp-vim'
+Plug 'OmniSharp/omnisharp-vim'
 
 " Initialize plugin system
 call plug#end()

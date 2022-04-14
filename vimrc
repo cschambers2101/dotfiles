@@ -49,3 +49,11 @@ Plugin 'OmniSharp/omnisharp-vim'
 
 " Initialize plugin system
 call plug#end()
+
+au VimEnter * :PlugInstall<CR>
+au VimEnter * :OmniSharpInstall<CR>
+au VimEnter * :OmniSharpStartServer<CR>
+
+" sets Omnisharp to use tab
+inoremap <expr> <Tab> pumvisible() ? '<C-n>' :                                                                                                                    
+\ getline('.')[col('.')-2] =~# '[[:alnum:].-_#$]' ? '<C-x><C-o>' : '<Tab>'

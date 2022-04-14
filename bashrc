@@ -128,3 +128,4 @@ alias serve="browser-sync start --server --files . --no-notify --host $SERVER_IP
 
 set -o vi
 
+eval "$(starship init bash)"

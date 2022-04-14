@@ -2,6 +2,7 @@ clear
 
 echo 'Installing NeoFetch'
 sudo apt -y install neofetch
+sudo snap install starship
 echo 'complete'
 
 # create local dotfiles

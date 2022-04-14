@@ -76,8 +76,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -87,10 +87,7 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -105,6 +102,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -116,32 +117,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added this
-powerline-daemon -q
-. ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
-
-neofetch
-# finish add
-
-# aliases
-alias ll="ls -lhA"
-alias cd..="cd .."
-alias here="find . -name "
-alias df="df -Tha --total"
-alias du="du -ach | sort -h"
-alias free="free -mt"
-alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
-alias mkdir="mkdir -pv"
-alias wget="wget -c"
-alias myip="curl http://ipecho.net/plain; echo"
-alias mp3="youtube-dl -x --audio-format mp3 -o '~/Music/%(title)s.%(ext)s' "
-alias aac="youtube-dl -x --audio-format aac -o '~/Music/%(title)s.%(ext)s' "
-alias python="python3"
-alias update="update_os"
-alias update_pop="update_pop_shell_shortcuts && update_pop_shell"
-alias c="clear"
-alias attach="tmux attach-session -t "
-alias tnew="tmux new -s "
 
 # browser-sync config
 # Get the current local IP address
@@ -150,95 +125,6 @@ export SERVER_IP=`hostname -I`
 # The command alias to start the browser-sync server
 alias serve="browser-sync start --server --files . --no-notify --host $SERVER_IP --port 9000"
 
-# functions
-function mcd () {
-    mkdir -p $1
-    cd $1
-}
-
-function extract {
- if [ -z "$1" ]; then
-    # display usage if no parameters given
-    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
-    echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
-    return 1
- else
-    for n in $@
-    do
-      if [ -f "$n" ] ; then
-          case "${n%,}" in
-            *.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar) 
-                         tar xvf "$n"       ;;
-            *.lzma)      unlzma ./"$n"      ;;
-            *.bz2)       bunzip2 ./"$n"     ;;
-            *.rar)       unrar x -ad ./"$n" ;;
-            *.gz)        gunzip ./"$n"      ;;
-            *.zip)       unzip ./"$n"       ;;
-            *.z)         uncompress ./"$n"  ;;
-            *.7z|*.arj|*.cab|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.rpm|*.udf|*.wim|*.xar)
-                         7z x ./"$n"        ;;
-            *.xz)        unxz ./"$n"        ;;
-            *.exe)       cabextract ./"$n"  ;;
-            *)
-                         echo "extract: '$n' - unknown archive method"
-                         return 1
-                         ;;
-          esac
-      else
-          echo "'$n' - file does not exist"
-          return 1
-      fi
-    done
-fi
-}
-
-function myhelp() {
-    echo 'Aliases in my ~/.bashrc'
-    echo
-    echo 'll -> ls -lhA'
-    echo 'cd.. -> cd ..'
-    echo 'here -> finds a named file in the current directory'
-    echo 'df -> df -Ths --total'
-    echo 'du -> du -ach | sort -h'
-    echo 'free -> free -mt'
-    echo 'psg -> ps aux | grep -v grep | grep -i -e VSZ -e'
-    echo 'mkdir -> mkdir -pv'
-    echo 'wget -> wget -c'
-    echo 'myip -> curl http://ipecho.net/plain; echo'
-    echo 'mp3 -> downloads mp3 file from youtube'
-    echo 'tnew -> tmux new -s '
-    echo 'attach -> tmux attach-session -t '
-    echo
-    echo 'Functions'
-    echo
-    echo 'mcd -> creates directory and cds into it'
-    echo 'extract -> should extract any archive file into the current directory'
-    echo 'c -> clear'
-    echo 'myhelp -> prints this help file'
-    echo 'server -> browser-sync start --server --files . --no-notify --host $SERVER_IP --port 9000 #requires node to be installed'
-}
-
-function update_os() {
-    sudo apt update
-    sudo apt upgrade -y
-    sudo apt autoremove -y
-    sudo apt install --fix-broken -y
-}
-
-function update_pop_shell() {
-    cd ~/github/shell
-    git pull
-    make clean
-    ./rebuild.sh
-}
-
-function update_pop_shell_shortcuts() {
-    cd ~/github/shell-shortcuts
-    git pull
-    make clean
-    make
-    sudo make install
-}
 
 set -o vi
 

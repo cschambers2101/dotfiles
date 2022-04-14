@@ -52,7 +52,7 @@ call plug#end()
 
 au VimEnter * :PlugInstall<CR>
 au VimEnter * :OmniSharpInstall<CR>
-au VimEnter * :OmniSharpStartServer<CR>
+" au VimEnter * :OmniSharpStartServer<CR>
 
 " sets Omnisharp to use tab
 inoremap <expr> <Tab> pumvisible() ? '<C-n>' :                                                                                                                    

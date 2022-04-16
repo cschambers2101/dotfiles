@@ -38,9 +38,12 @@ call plug#begin()
 " Make sure you use single quotes
 
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Initialize plugin system
 call plug#end()
+
+colorscheme dracula
 
 au VimEnter * :PlugInstall<CR>
 au VimEnter * :OmniSharpInstall<CR>

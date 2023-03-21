@@ -63,7 +63,7 @@ function myhelp() {
     echo 'extract -> should extract any archive file into the current directory'
     echo 'c -> clear'
     echo 'myhelp -> prints this help file'
-    echo 'server -> browser-sync start --server --files . --no-notify --host $SERVER_IP --port 9000 #requires node to be installed'
+    # echo 'server -> browser-sync start --server --files . --no-notify --host $SERVER_IP --port 9000 #requires node to be installed'
 }
 
 function update_os() {

@@ -14,9 +14,13 @@ echo 'complete'
 echo
 echo 'Creating local dotfiles'
 # create local dotfiles
+mv ~/.bashrc ~/.bashrc_old
 cp bashrc ~/.bashrc
+mv ~/.bash_aliases ~/.bash_aliases_old
 cp bash_aliases ~/.bash_aliases
+mv ~/.bash_functions ~/.bash_functions_old
 cp bash_functions ~/.bash_functions
+mv ~/.vimrc ~/.vimrc_old
 cp vimrc ~/.vimrc
 echo 'complete'
 

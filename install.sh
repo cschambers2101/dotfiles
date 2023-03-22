@@ -1,6 +1,7 @@
 clear
 
 echo 'Installing NeoFetch and Starship'
+sudo apt update
 sudo apt -y install neofetch curl
 curl -sS https://starship.rs/install.sh | sh
 echo 'complete'

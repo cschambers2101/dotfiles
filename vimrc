@@ -21,6 +21,8 @@ Plug 'mattn/emmet-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'michal-h21/vimwiki-sync'
+
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.

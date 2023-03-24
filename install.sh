@@ -1,8 +1,9 @@
 clear
 
-echo 'Installing NeoFetch and Starship'
+echo 'Installing NeoFetch, Starship, Vim and vimwiki-markdown'
 sudo apt update
-sudo apt -y install neofetch curl
+sudo apt -y install neofetch curl vim-gtk3 python3-pip
+pip3 install vimwiki-markdown
 curl -sS https://starship.rs/install.sh | sh
 echo 'complete'
 

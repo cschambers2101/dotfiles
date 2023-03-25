@@ -131,7 +131,7 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
-" vimiwiki-markdown
+" vimwiki-markdown
 let g:vimwiki_list = [{
 	\ 'path': '~/vimwiki',
 	\ 'template_path': '~/vimwiki/templates/',
@@ -140,7 +140,7 @@ let g:vimwiki_list = [{
 	\ 'ext': '.md',
 	\ 'path_html': '~/vimwiki/site_html/',
 	\ 'custom_wiki2html': 'vimwiki_markdown',
-	\ 'template_ext': '.tpl'}]
+	\ 'template_ext': '.html'}]
 
 " Nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>

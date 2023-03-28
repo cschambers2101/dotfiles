@@ -24,6 +24,8 @@ mv ~/.bash_functions ~/.bash_functions_old
 cp bash_functions ~/.bash_functions
 mv ~/.vimrc ~/.vimrc_old
 cp vimrc ~/.vimrc
+mv ~/.tmux.conf ~/.tmux.conf.old
+cp tmux.conf ~/.tmux.conf
 echo 'complete'
 
 echo

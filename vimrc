@@ -38,14 +38,12 @@ Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'ap/vim-buftabline'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vimwiki/vimwiki'
+Plug 'michal-h21/vimwiki-sync'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
 call plug#end()
-
-"   filetype indent off   " Disable file-type-specific indentation
-"   syntax off            " Disable syntax highlighting
-
 
 syntax on
 
@@ -191,3 +189,14 @@ function! CheckBackspace() abort
 endfunction
 
 colorscheme gruvbox
+
+" vimwiki-markdown
+let g:vimwiki_list = [{
+    \ 'path': '~/vimwiki',
+    \ 'template_path': '~/vimwiki/templates/',
+    \ 'template_default': 'default',
+    \ 'syntax': 'markdown',
+    \ 'ext': '.md',
+    \ 'path_html': '~/vimwiki/site_html/',
+    \ 'custom_wiki2html': 'vimwiki_markdown',
+    \ 'template_ext': '.html'}]

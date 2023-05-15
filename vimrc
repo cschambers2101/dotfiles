@@ -42,7 +42,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
 call plug#end()
-" You can revert the settings after the call like so:
+
 "   filetype indent off   " Disable file-type-specific indentation
 "   syntax off            " Disable syntax highlighting
 
@@ -85,9 +85,9 @@ set shortmess+=c
 set colorcolumn=100
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-map <C-n> :NERDTreeToggle<CR>
+map <C-f> :NERDTreeToggle<CR>
 map <C-p> :Files<CR>
-map <C-f> :Rg<CR>
+map <C-r> :Rg<CR>
 map <C-t> :e <cfile><cr>
 map <S-Tab> :bn<CR>
 map <F5> :setlocal spell! spelllang=en_gb<CR>
@@ -121,9 +121,9 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Buffers setup
-" set hidden
-" nnoremap <C-N> :bnext<CR>
-" nnoremap <C-P> :bprev<CR>
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
 
 " Import plugins
 if filereadable(expand("~/.vimrc.plug"))

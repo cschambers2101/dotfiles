@@ -69,6 +69,11 @@ set termguicolors
 set scrolloff=8
 set modifiable
 set bg=dark
+set backspace=indent,eol,start
+set clipboard=unnamedplus
+set spelllang=en_gb
+set spell
+
 
 " Give more space for displaying messages.
 set cmdheight=2
@@ -200,3 +205,7 @@ let g:vimwiki_list = [{
     \ 'path_html': '~/vimwiki/site_html/',
     \ 'custom_wiki2html': 'vimwiki_markdown',
     \ 'template_ext': '.html'}]
+
+" Select the font for the hardcopy
+set printfont=Courier:h8
+command! -range=% HardcopyPdf <line1>,<line2> hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo 'Created: %.pdf'

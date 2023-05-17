@@ -39,7 +39,7 @@ Plug 'morhetz/gruvbox'
 Plug 'ap/vim-buftabline'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vimwiki/vimwiki'
-Plug 'michal-h21/vimwiki-sync'
+" Plug 'michal-h21/vimwiki-sync'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
@@ -72,8 +72,7 @@ set bg=dark
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set spelllang=en_gb
-set spell
-
+setlocal spell
 
 " Give more space for displaying messages.
 set cmdheight=2

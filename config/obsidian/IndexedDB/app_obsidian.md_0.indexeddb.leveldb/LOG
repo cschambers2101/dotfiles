@@ -1,0 +1,23 @@
+2023/09/18-13:42:19.155 17414 Creating DB /home/craigchambers/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb since it was missing.
+2023/09/18-13:42:19.168 17414 Reusing MANIFEST /home/craigchambers/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2023/09/19-13:09:02.167 17414 Level-0 table #5: started
+2023/09/19-13:09:02.194 17414 Level-0 table #5: 1143879 bytes OK
+2023/09/19-13:09:02.196 17414 Delete type=0 #3
+2023/09/19-13:20:33.595 17414 Level-0 table #7: started
+2023/09/19-13:20:33.619 17414 Level-0 table #7: 1103654 bytes OK
+2023/09/19-13:20:33.621 17414 Delete type=0 #4
+2023/09/19-13:28:50.606 17412 Compacting 1@1 + 1@2 files
+2023/09/19-13:28:50.613 17412 Generated table #8@1: 355 keys, 86353 bytes
+2023/09/19-13:28:50.613 17412 Compacted 1@1 + 1@2 files => 86353 bytes
+2023/09/19-13:28:50.615 17412 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/19-13:28:50.615 17412 Delete type=2 #7
+2023/09/19-13:28:50.615 17412 Delete type=2 #5
+2023/09/19-14:13:18.549 17414 Level-0 table #10: started
+2023/09/19-14:13:18.564 17414 Level-0 table #10: 1203427 bytes OK
+2023/09/19-14:13:18.571 17414 Delete type=0 #6
+2023/09/19-14:32:18.324 17416 Compacting 1@1 + 1@2 files
+2023/09/19-14:32:18.334 17416 Generated table #11@1: 489 keys, 154923 bytes
+2023/09/19-14:32:18.334 17416 Compacted 1@1 + 1@2 files => 154923 bytes
+2023/09/19-14:32:18.338 17416 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/19-14:32:18.339 17416 Delete type=2 #10
+2023/09/19-14:32:18.339 17416 Delete type=2 #8

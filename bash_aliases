@@ -20,3 +20,7 @@ alias tnew="tmux new -s "
 # some more ls aliases
 alias la='ls -A'
 alias l='ls -CF'
+
+# add logout for terminal
+logout='gnome-session-quit'
+

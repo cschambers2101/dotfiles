@@ -26,6 +26,8 @@ mv ~/.vimrc ~/.vimrc_old
 cp vimrc ~/.vimrc
 mv ~/.tmux.conf ~/.tmux.conf.old
 cp tmux.conf ~/.tmux.conf
+mv ~/.config/starship.toml ~/.config/starship.toml.old
+cp starship.toml ~/.config/starship.toml
 echo 'complete'
 
 echo

@@ -166,7 +166,8 @@ keys = [
 
 # LAUNCH PROGRAMS
     Key([mod], "b", lazy.spawn("google-chrome")), # Launch Chrome
-    Key([mod], "Return", lazy.spawn("gnome-terminal")) # Launch Gnome Terminal
+    Key([mod], "Return", lazy.spawn("gnome-terminal")), # Launch Gnome Terminal
+    Key([mod], "r", lazy.spawn("rofi -show run")) # Launch Rofi
 
 
     ]

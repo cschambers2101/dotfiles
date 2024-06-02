@@ -255,12 +255,12 @@ screens = [
                ),
                separator,
                widget.CPU(
-					format=" {load_percent:04}%",
+					format="  {load_percent:04}%",
 					foreground=color_schema['dark-magenta'],
 			   ),
 			   separator,
                widget.Memory(
-                format='󰻠{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
+                format='󰻠 {MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
                 measure_mem='G',
                 foreground=color_schema['magenta']
                ),

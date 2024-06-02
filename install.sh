@@ -2,7 +2,7 @@ clear
 
 echo 'Installing NeoFetch, Starship, Vim and vimwiki-markdown'
 sudo apt update
-sudo apt -y install neofetch curl vim-gtk3 python3-pip
+sudo apt -y install curl vim-gtk3 python3-pip
 pip3 install vimwiki-markdown
 curl -sS https://starship.rs/install.sh | sh
 echo 'complete'
@@ -29,6 +29,12 @@ cp tmux.conf ~/.tmux.conf
 mv ~/.config/starship.toml ~/.config/starship.toml.old
 cp starship.toml ~/.config/starship.toml
 echo 'complete'
+
+echo 'Installing Tmux TPM Plugin Manager'
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo 'Complete!'
+
+source ~/.bashrc
 
 echo
 echo

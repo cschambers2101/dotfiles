@@ -1,8 +1,8 @@
 clear
 
-echo 'Installing Starship, Vim and vimwiki-markdown'
+echo 'Installing Starship, Vim, Rofi and vimwiki-markdown'
 sudo apt update
-sudo apt -y install curl vim-gtk3 python3-pip
+sudo apt -y install curl vim-gtk3 python3-pip rofi
 pip3 install vimwiki-markdown
 curl -sS https://starship.rs/install.sh | sh
 echo 'complete'
@@ -29,11 +29,26 @@ cp tmux.conf ~/.tmux.conf
 mv ~/.config/starship.toml ~/.config/starship.toml.old
 cp starship.toml ~/.config/starship.toml
 mv ~/.config/qtile/config.py ~/.config/qtile/config.py.old
+mkdir -p ~/.config/qtile
 cp config/qtile/config.py ~/.config/qtile/config.py
 echo 'complete'
 
 echo 'Installing Tmux TPM Plugin Manager'
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo 'Complete!'
+
+echo 'install qtile'
+sudo apt install xserver-xorg xinit
+sudo apt install libpangocairo-1.0-0
+sudo apt install python3-pip python3-xcffib python3-cairocffi
+pip install qtile --break-system-packages
+echo "[Desktop Entry]
+Name=Qtile
+Comment=Qtile Session
+Exec=qtile start
+Type=Application
+Keywords=wm;tiling" | sudo tee /usr/share/xsessions/qtile.desktop
+
 echo 'Complete!'
 
 source ~/.bashrc

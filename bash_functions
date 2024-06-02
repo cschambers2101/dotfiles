@@ -72,3 +72,7 @@ function update_os() {
     sudo apt autoremove -y
     sudo apt install --fix-broken -y
 }
+
+function qtile_scaling() {
+    xrandr --output eDP-1 --scale 0.5x0.5
+}

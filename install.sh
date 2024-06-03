@@ -2,7 +2,7 @@ clear
 
 echo 'Installing Starship, Vim, Rofi and vimwiki-markdown'
 sudo apt update
-sudo apt -y install curl vim-gtk3 python3-pip rofi
+sudo apt -y install curl vim-gtk3 python3-pip rofi i3lock
 pip3 install vimwiki-markdown
 curl -sS https://starship.rs/install.sh | sh
 echo 'complete'

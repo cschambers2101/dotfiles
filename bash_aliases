@@ -16,6 +16,7 @@ alias update="update_os"
 alias c="clear"
 alias attach="tmux attach-session -t "
 alias tnew="tmux new -s "
+alias activate="source venv/bin/activate"
 
 # some more ls aliases
 alias la='ls -A'

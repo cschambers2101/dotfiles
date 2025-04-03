@@ -20,7 +20,6 @@ call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'preservim/nerdtree'
-# Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'michal-h21/vimwiki-sync'
 
 

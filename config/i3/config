@@ -66,6 +66,12 @@ bindsym $mod+d exec $wm_setting_app_launcher
 # Run a window compositor (for effects like transparency or full VSync)
 exec_always --no-startup-id $wm_setting_app_compositor
 
+# keybinding to lock screen
+bindsym $Mod+l exec "i3lock -c 000000 -i $background_image_path"
+
+# auto lock the screen
+exec "xautolock -detectsleep -time 3 -locker \"i3lock -i $background_image_path\""
+
 ### Workspaces ###
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
